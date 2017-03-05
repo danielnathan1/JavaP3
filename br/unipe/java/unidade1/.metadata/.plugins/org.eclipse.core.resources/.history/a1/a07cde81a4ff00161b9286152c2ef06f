@@ -1,0 +1,18 @@
+package Emprestimo;
+
+import java.util.Scanner;
+
+public class UsandoEmprestimo {
+	public static void main(String[] args) {
+		Scanner leitor = new Scanner(System.in);
+		
+		Emprestimo emprestimo= new Emprestimo();
+		
+		System.out.println("Digite o nome do Usuario: ");
+		emprestimo.nomeUsuario = leitor.nextLine();
+		
+		System.out.println(emprestimo.nomeUsuario + "Digite sua idade: ");
+		
+	}
+	
+}

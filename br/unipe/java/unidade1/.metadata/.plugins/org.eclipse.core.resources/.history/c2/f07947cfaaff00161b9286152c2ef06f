@@ -1,0 +1,14 @@
+
+public class Banco {
+	private ContaCorrente[] contas;
+	
+	public void cadastraConta(String nome, String endereco, double valor){
+		
+		cliente cliente = new Cliente(nome, endereco);
+		
+		ContaCorrente contaCorrente = new ContaCorrente((1, cliente, saldo);
+		
+	}
+	
+	
+}

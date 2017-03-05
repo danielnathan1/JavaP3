@@ -1,0 +1,11 @@
+
+public class ContaCorrente {
+	
+	
+	private int numeroConta;
+	private Cliente cliente;
+	private double saldo;
+	
+	
+	
+}
