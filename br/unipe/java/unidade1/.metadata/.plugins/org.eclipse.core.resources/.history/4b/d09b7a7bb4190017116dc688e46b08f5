@@ -1,0 +1,26 @@
+
+public class UsandoVenda {
+	public static void main(String[] args) {
+		
+		produtoSemPromocao();
+		System.out.println();
+	}
+	
+	
+	
+	public static void produtoSemPromocao(){
+		Produto produto = new Produto("001", "arroz", 3, 2, false);
+		Vendedor vendedor = new Vendedor("Dudu", "1", "Rua dos alfeneiros");
+		Venda venda = new Venda();
+		
+		venda.setProduto(produto);
+		venda.setVendedor(vendedor);
+		venda.setQuantidadeItens(2);
+		venda.calcularValor();
+		venda.calcularComissao();
+		venda.imprimir();
+		
+	}
+	
+	
+}
