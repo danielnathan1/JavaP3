@@ -4,3 +4,22 @@
 2017-03-31 17:04:07,710 [Worker-3] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
 2017-04-02 13:42:00,860 [Worker-2] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
 2017-04-05 00:21:21,353 [Worker-14] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2017-04-05 20:21:22,731 [Worker-9] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2017-04-06 20:37:36,372 [Worker-2] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2017-04-10 20:54:02,985 [Worker-3] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2017-04-19 20:38:55,519 [Worker-0] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2017-04-19 21:10:04,936 [Worker-28] ERROR o.e.r.s.GitSnippetRepository - Transport operation failed.
+org.eclipse.jgit.api.errors.TransportException: http://git.eclipse.org/gitroot/recommenders/org.eclipse.recommenders.snipmatch.snippets.git: 302 Found
+	at org.eclipse.jgit.api.FetchCommand.call(FetchCommand.java:135) ~[org.eclipse.jgit_4.4.1.201607150455-r.jar:4.4.1.201607150455-r]
+	at org.eclipse.recommenders.snipmatch.GitSnippetRepository.fetch(GitSnippetRepository.java:198) ~[org.eclipse.recommenders.snipmatch_2.4.5.v20161130-1427.jar:na]
+	at org.eclipse.recommenders.snipmatch.GitSnippetRepository.open(GitSnippetRepository.java:91) ~[org.eclipse.recommenders.snipmatch_2.4.5.v20161130-1427.jar:na]
+	at org.eclipse.recommenders.internal.snipmatch.rcp.EclipseGitSnippetRepository$2.run(EclipseGitSnippetRepository.java:165) [org.eclipse.recommenders.snipmatch.rcp_2.4.5.v20161130-1427.jar:na]
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55) [org.eclipse.core.jobs_3.8.0.v20160509-0411.jar:na]
+Caused by: org.eclipse.jgit.errors.TransportException: http://git.eclipse.org/gitroot/recommenders/org.eclipse.recommenders.snipmatch.snippets.git: 302 Found
+	at org.eclipse.jgit.transport.TransportHttp.connect(TransportHttp.java:502) ~[org.eclipse.jgit_4.4.1.201607150455-r.jar:4.4.1.201607150455-r]
+	at org.eclipse.jgit.transport.TransportHttp.openFetch(TransportHttp.java:288) ~[org.eclipse.jgit_4.4.1.201607150455-r.jar:4.4.1.201607150455-r]
+	at org.eclipse.jgit.transport.FetchProcess.executeImp(FetchProcess.java:136) ~[org.eclipse.jgit_4.4.1.201607150455-r.jar:4.4.1.201607150455-r]
+	at org.eclipse.jgit.transport.FetchProcess.execute(FetchProcess.java:122) ~[org.eclipse.jgit_4.4.1.201607150455-r.jar:4.4.1.201607150455-r]
+	at org.eclipse.jgit.transport.Transport.fetch(Transport.java:1179) ~[org.eclipse.jgit_4.4.1.201607150455-r.jar:4.4.1.201607150455-r]
+	at org.eclipse.jgit.api.FetchCommand.call(FetchCommand.java:128) ~[org.eclipse.jgit_4.4.1.201607150455-r.jar:4.4.1.201607150455-r]
+	... 4 common frames omitted
