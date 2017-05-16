@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move element &apos;LisoException.java&apos; to &apos;Aula1_3/src/exerciciosDeAula&apos;&#x0D;&#x0A;- Original project: &apos;Aula1_3&apos;&#x0D;&#x0A;- Destination element: &apos;Aula1_3/src/exerciciosDeAula&apos;&#x0D;&#x0A;- Original element: &apos;LisoException.java&apos;&#x0D;&#x0A;- Update references to refactored element" description="Move file" destination="/src&lt;exerciciosDeAula" element1="LisoException.java" files="1" flags="589830" folders="0" id="org.eclipse.jdt.ui.move" policy="org.eclipse.jdt.ui.moveResources" qualified="false" references="true" stamp="1494546992261" units="0" version="1.0"/>
+</session>

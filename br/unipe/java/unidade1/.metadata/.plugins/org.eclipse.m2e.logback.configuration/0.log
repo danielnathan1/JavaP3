@@ -23,3 +23,12 @@ Caused by: org.eclipse.jgit.errors.TransportException: http://git.eclipse.org/gi
 	at org.eclipse.jgit.transport.Transport.fetch(Transport.java:1179) ~[org.eclipse.jgit_4.4.1.201607150455-r.jar:4.4.1.201607150455-r]
 	at org.eclipse.jgit.api.FetchCommand.call(FetchCommand.java:128) ~[org.eclipse.jgit_4.4.1.201607150455-r.jar:4.4.1.201607150455-r]
 	... 4 common frames omitted
+2017-05-10 20:33:38,205 [Worker-1] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2017-05-10 20:33:41,381 [Worker-1] INFO  c.g.t.t.d.PublishedGradleVersions - Updating Gradle version information cache failed. Using outdated cache.
+2017-05-10 21:12:24,290 [Worker-1] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2017-05-10 21:17:51,792 [Worker-3] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2017-05-11 20:35:14,506 [Worker-1] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2017-05-11 21:45:20,692 [Worker-0] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2017-05-11 21:45:31,093 [Worker-0] INFO  c.g.t.t.d.PublishedGradleVersions - Updating Gradle version information cache failed. Using outdated cache.
+2017-05-11 21:46:49,436 [Worker-0] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2017-05-16 16:10:43,438 [Worker-1] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.

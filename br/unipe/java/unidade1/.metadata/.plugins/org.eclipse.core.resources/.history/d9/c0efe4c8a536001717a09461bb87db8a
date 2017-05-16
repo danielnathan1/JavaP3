@@ -1,0 +1,15 @@
+package exerciciosDeAula;
+
+public class Principal {
+	public static void main(String[] args){
+		
+		Agencia agencia = new Agencia();
+		ContaCorrente conta = null;
+		
+		agencia.cadastrarConta(conta);
+		
+		agencia.consultarConta(conta);
+		
+		System.out.println("Opa estou rico");
+	}
+}

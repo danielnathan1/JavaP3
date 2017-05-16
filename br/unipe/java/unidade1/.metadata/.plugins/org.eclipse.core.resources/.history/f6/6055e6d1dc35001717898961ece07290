@@ -1,0 +1,14 @@
+package exerciciosDeAula;
+
+public class Agencia {
+	
+	public void cadastrarUsuario(){
+		System.out.println("Usuario");
+	}
+	
+	public void consultarCliente(){
+		System.out.println("Cliente");
+	}
+	
+	
+}

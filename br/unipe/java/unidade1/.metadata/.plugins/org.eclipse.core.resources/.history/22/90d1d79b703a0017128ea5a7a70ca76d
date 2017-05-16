@@ -1,0 +1,9 @@
+
+public class DescontoException extends RuntimeException{
+	
+	public DescontoException(String mensagem){
+		super(mensagem);
+		
+	}
+		
+}

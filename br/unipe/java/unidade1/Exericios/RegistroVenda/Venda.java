@@ -1,0 +1,115 @@
+
+public class Venda {
+	public Produto produto;
+	public Vendedor vendedor;
+	float desconto;
+	int quantidadeItens;
+	float valor;
+	float valorComissao;
+	
+	public Produto getProduto() {
+		return produto;
+	}
+	public void setProduto(Produto produto) {
+		this.produto = produto;
+	}
+	public Vendedor getVendedor() {
+		return vendedor;
+	}
+	public void setVendedor(Vendedor vendedor) {
+		this.vendedor = vendedor;
+	}
+	public float getDesconto() {
+		return desconto;
+	}
+	public void setDesconto(float desconto) {
+		this.desconto = desconto;
+	}
+	public int getQuantidadeItens() {
+		return quantidadeItens;
+	}
+	public void setQuantidadeItens(int quantidadeItens) {
+		if(this.quantidadeItens<0){
+			throw new ValorException("A quantidade de itens precisa ser Positiva!");
+		}
+		this.quantidadeItens = quantidadeItens;
+	}
+	public float getValor() {
+		return valor;
+	}
+	public void setValor(float valor) {
+		if(this.valor<0){
+			throw new ValorException("Erro, o valor da venda está incorreto");
+		}
+		this.valor = valor;
+	}
+	
+	
+	public void efetuarDesconto(float porcentagem){
+		
+		try{
+		desconto = (porcentagem / 100) * this.produto.getValorVenda();
+		
+		if(desconto<0){
+			throw new ValorException("Valor invalido do desconto");
+		}
+		
+		if((produto.getValorVenda() - desconto) < produto.getValorCusto()){
+			desconto = 0;
+		}
+		}catch (Exception e) {
+			e.printStackTrace();
+			System.out.println("Erro no Desconto!");
+		}finally {
+			System.out.println("Finally");
+		}
+	}
+	
+	
+	
+	
+	public void calcularValor(){
+		
+		this.valor = (this.produto.getValorVenda() - this.desconto) * this.quantidadeItens;
+		if (produto.getValorVenda()<0){
+			throw new ValorException("O valor do Produto é Invalido!");
+		}
+	}
+	
+	
+	public float calcularComissao(){
+		
+		
+		if(this.produto.promocao == true){
+			valorComissao = ((this.vendedor.getComissao() / 100) * getValor() / 2);
+			
+		}else{
+			valorComissao = ((this.vendedor.getComissao() / 100) * getValor());
+		}
+		
+		if(valorComissao<0){
+			throw new ValorException("Erro, o valor da Comissão está incorreto");
+		}
+		
+		return valorComissao;
+		
+	}
+	
+	public void imprimir(){
+		System.out.println("\nVendedor: "+ vendedor.getNome());
+		System.out.println("\nCodigo : " + vendedor.getCodigo());
+		System.out.println("\nComissao :R$" + valorComissao);
+		System.out.println("\n\nQuantidade de itens vendidos: " + quantidadeItens);
+		System.out.println("\nCodigo do produto: " + produto.getCodigo()+ "\ndescricao: \n" + produto.getDescricao());
+		System.out.println("\nValor do Produto:R$" + produto.getValorVenda());
+		if(produto.promocao == true){
+			System.out.println("\nProduto esta em promocao");
+			System.out.println("\nValor do desconto:R$" + desconto);
+		}
+		System.out.println("\nValor total da venda:R$" + valor);
+		
+		
+		
+	}
+	
+}
