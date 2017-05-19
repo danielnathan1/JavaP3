@@ -1,0 +1,28 @@
+package gravarObjeto;
+
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectOutputStream;
+import java.util.Scanner;
+
+public class Gravar {
+	public static void main(String[] args) {
+		Contato c = new Contato();
+		Scanner leitor = new Scanner(System.in);
+		
+		c.setId(leitor.nextLine());
+		
+		
+		//c.setId("01");
+		System.out.println("Digite o nome do usuario: ");
+		c.setNome("david");
+		
+		try{
+			FileOutputStream fos = new FileOutputStream("arquivo.ser");
+			ObjectOutputStream oss = new ObjectOutputStream(fos);
+			oss.close();
+		}catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+}

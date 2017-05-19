@@ -1,0 +1,30 @@
+package projetoTeste;
+
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.Serializable;
+
+public class ManipulaObjeto {
+	
+	public void salvar(Serializable serializable,String nome){
+		
+		
+		try {
+			
+			FileOutputStream fos = new FileOutputStream(nome);
+			
+			
+		} catch (FileNotFoundException e) {
+			
+			e.printStackTrace();
+		}
+			
+			
+		
+		
+		
+		
+		
+		
+	}
+}

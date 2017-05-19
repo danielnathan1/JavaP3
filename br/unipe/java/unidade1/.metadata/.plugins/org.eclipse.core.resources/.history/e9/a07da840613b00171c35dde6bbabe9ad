@@ -1,0 +1,21 @@
+package gravarObjeto;
+
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectOutputStream;
+
+public class Gravar {
+	public static void main(String[] args) {
+		Contato c = new Contato();
+		c.setId("01");
+		c.setNome("david");
+		
+		try{
+			FileOutputStream fos = new FileOutputStream("arquivo.ser");
+			ObjectOutputStream oss = new ObjectOutputStream(fos);
+			oss.close();
+		}catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+}
