@@ -1,0 +1,36 @@
+import java.util.Scanner;
+
+public class Menu {
+	
+	public int opcao;
+	
+	public int menuPrincipal(){
+		System.out.println("\t\tBEM VINDO AO REGISTRO DE VENDAt\t\n\n");
+		System.out.println("\n1-EFETUAR VENDA");
+		System.out.println("\n2-REGISTRAR VENDEDOR");
+		System.out.println("\n3-REGISTRAR PRODUTO");
+		System.out.println("\n4-SAIR");
+		Scanner leitor = new Scanner(System.in);
+		
+		setOpcao(leitor.nextInt());
+		
+		return opcao;
+	}
+	
+	public void menuRVendedor(){
+		System.out.println("\nNOME: ");
+		System.out.println("\nID: ");
+		System.out.println("\nEndereço: ");
+	}
+	
+	public int getOpcao() {
+		return opcao;
+	}
+	
+
+	public void setOpcao(int opcao) {
+		this.opcao = opcao;
+	}
+
+
+}

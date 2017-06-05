@@ -1,0 +1,54 @@
+import java.util.Scanner;
+
+import javax.swing.plaf.SliderUI;
+
+public class UsandoVenda {
+	public static void main(String[] args) {
+		//
+		Menu menu = new Menu();
+		//
+		Vendedor vendedor = new Vendedor();
+		//
+		Produto produto = new Produto();
+		//
+		Scanner leitor = new Scanner(System.in);
+		//
+		Persist persist = new Persist();
+		
+		
+		
+		while(menu.getOpcaoRetorno() != 4){
+			menu.menuPrincipal();
+			switch (menu.getOpcao()) {
+			case 1:
+				
+				//EFETUAR VENDA
+				
+				break;
+			case 2:
+				
+				//REGISTRO VENDEDOR
+				vendedor.registrarVendedor(vendedor);
+				persist.salvar(vendedor, vendedor.getId());
+				menu.menuRetorno();
+				
+				break;
+			case 3:
+				
+				//REGISTRAR PRODUTO
+				produto.registrarProduto(produto);
+				persist.salvar(produto, produto.getCodigo());
+				menu.menuRetorno();
+				
+				break;
+			case 4:
+				System.exit(0);
+			default:
+				break;
+			}
+		}
+	}
+	
+	
+	
+}

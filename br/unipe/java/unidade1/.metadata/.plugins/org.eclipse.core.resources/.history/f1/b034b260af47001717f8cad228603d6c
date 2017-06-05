@@ -1,0 +1,47 @@
+import java.util.Scanner;
+
+public class Vendedor {
+	
+	public String nome;
+	public String id;
+	public static float comissao = 10;
+	public String endereco;
+	
+	public Vendedor registrarCliente(Vendedor vendedor){
+		Scanner leitor = new Scanner(System.in);
+		System.out.println("\nNOME: ");
+		vendedor.setNome(leitor.nextLine());
+		System.out.println("\nID: ");
+		vendedor.setId(leitor.nextLine());
+		System.out.println("\nEndereço: ");
+		vendedor.setEndereco(leitor.nextLine());
+		
+		return vendedor;
+	}
+	
+	
+	public String getNome() {
+		return nome;
+	}
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+	public String getCodigo() {
+		return id;
+	}
+	public void setId(String id) {
+		this.id = id;
+	}
+	public float getComissao() {
+		return comissao;
+	}
+	
+	public String getEndereco() {
+		return endereco;
+	}
+	public void setEndereco(String endereco) {
+		this.endereco = endereco;
+	}
+
+	
+}

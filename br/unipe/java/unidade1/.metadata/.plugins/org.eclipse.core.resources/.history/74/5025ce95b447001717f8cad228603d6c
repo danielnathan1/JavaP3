@@ -1,0 +1,43 @@
+import java.util.Scanner;
+
+public class UsandoVenda {
+	public static void main(String[] args) {
+		//
+		Menu menu = new Menu();
+		//
+		Vendedor vendedor = new Vendedor();
+		//
+		Scanner leitor = new Scanner(System.in);
+		//
+		Persist persist = new Persist();
+		
+		
+		menu.menuPrincipal();
+		
+		
+		while(menu.getOpcaoRetorno() != 4){
+			switch (menu.getOpcao()) {
+			case 1:
+				System.out.println("aqui");
+				//EFETUAR VENDA
+				
+				break;
+			case 2:
+				//REGISTRO VENDEDOR
+				vendedor.registrarVendedor(vendedor);
+				persist.salvar(vendedor, vendedor.getId());
+				menu.menuRetorno();
+				
+				break;
+			case 3:
+				//REGISTRAR PRODUTO
+				break;
+			default:
+				break;
+			}
+		}
+	}
+	
+	
+	
+}

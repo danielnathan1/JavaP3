@@ -1,0 +1,62 @@
+import java.util.Scanner;
+
+public class UsandoVenda {
+	public static void main(String[] args) {
+		//
+		Menu menu = new Menu();
+		//
+		Vendedor vendedor = new Vendedor();
+		//
+		Produto produto = new Produto();
+		//
+		Venda venda = new Venda();
+		//
+		Scanner leitor = new Scanner(System.in);
+		//
+		Persist persist = new Persist();
+		
+		
+		
+		while(menu.getOpcaoRetorno() != 4){
+			menu.menuPrincipal();
+			switch (menu.getOpcao()) {
+			case 1:
+				menu.menuVenda();
+				System.out.println("\nDIGITE O CODIGO DO PRODUTO: ");
+				Object x = persist.lerObjeto(leitor.nextLine());
+				//quantidade
+				System.out.println("\nQUANTIADE DE ITENS: ");
+				//valor final a se pagar
+				System.out.println("\nO VALOR DA COMPRA É: ");
+				
+				//detalhamento
+				//EFETUAR VENDA
+				
+				break;
+			case 2:
+				
+				//REGISTRO VENDEDOR
+				vendedor.registrarVendedor(vendedor);
+				persist.salvar(vendedor, vendedor.getId());
+				menu.menuRetorno();
+				
+				break;
+			case 3:
+				
+				//REGISTRAR PRODUTO
+				produto.registrarProduto(produto);
+				persist.salvar(produto, produto.getCodigo());
+				menu.menuRetorno();
+				
+				break;
+			case 4:
+				System.exit(0);
+			default:
+				break;
+			}
+		}
+	}
+	
+	
+	
+}
